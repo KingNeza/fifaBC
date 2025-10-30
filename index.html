@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latin House FIFA 2026 - Vancouver</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.7;
+            color: #1a1a1a;
+            background: #0a0a0a;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, rgba(20, 20, 20, 0.85) 0%, rgba(10, 10, 10, 0.9) 100%),
+                        url('https://images.unsplash.com/photo-1579952363873-27f3bade9f55?w=1200&q=80') center/cover;
+            padding: 100px 40px;
+            text-align: center;
+            border-radius: 24px;
+            margin-bottom: 40px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        h1 {
+            font-family: 'Montserrat', sans-serif;
+            color: #fff;
+            font-size: 4em;
+            margin-bottom: 15px;
+            font-weight: 900;
+            letter-spacing: -2px;
+            text-transform: uppercase;
+        }
+        
+        .subtitle {
+            color: #00ff88;
+            font-size: 1.6em;
+            margin-bottom: 20px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        .tagline {
+            color: #e0e0e0;
+            font-size: 1.3em;
+            font-style: italic;
+            font-weight: 300;
+        }
+        
+        .section {
+            background: #ffffff;
+            padding: 60px;
+            margin-bottom: 30px;
+            border-radius: 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .section-with-image {
+            background: #ffffff;
+            margin-bottom: 30px;
+            border-radius: 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        
+        .section-image {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+        
+        .section-content {
+            padding: 60px;
+        }
+        
+        h2 {
+            font-family: 'Montserrat', sans-serif;
+            color: #0a0a0a;
+            font-size: 2.8em;
+            margin-bottom: 30px;
+            font-weight: 800;
+            letter-spacing: -1px;
+            position: relative;
+            padding-bottom: 20px;
+        }
+        
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, #00ff88 0%, #00d4ff 100%);
+            border-radius: 2px;
+        }
+        
+        h3 {
+            font-family: 'Montserrat', sans-serif;
+            color: #1a1a1a;
+            font-size: 1.8em;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+        
+        p {
+            margin-bottom: 20px;
+            font-size: 1.1em;
+            text-align: justify;
+            color: #4a4a4a;
+            font-weight: 400;
+            line-height: 1.8;
+        }
+        
+        .countries-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            margin: 40px 0;
+        }
+        
+        .country-card {
+            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+            padding: 30px;
+            border-radius: 16px;
+            text-align: center;
+            border: 2px solid #e0e0e0;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .country-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 40px rgba(0, 255, 136, 0.2);
+            border-color: #00ff88;
+        }
+        
+        .country-card .name {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            color: #0a0a0a;
+            font-size: 1.3em;
+            letter-spacing: 0.5px;
+        }
+        
+        .activities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+        
+        .activity-card {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            overflow: hidden;
+            border: 1px solid #f0f0f0;
+        }
+        
+        .activity-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(0, 255, 136, 0.15);
+        }
+        
+        .activity-image {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+        }
+        
+        .activity-content {
+            padding: 35px;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+            color: white;
+        }
+        
+        .activity-card h4 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.6em;
+            margin-bottom: 15px;
+            color: #00ff88;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+        
+        .activity-card p {
+            text-align: left;
+            font-size: 1em;
+            color: #e0e0e0;
+            line-height: 1.7;
+        }
+        
+        .timeline {
+            position: relative;
+            padding-left: 50px;
+            margin: 40px 0;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 15px;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: linear-gradient(to bottom, #00ff88, #00d4ff);
+            border-radius: 2px;
+        }
+        
+        .timeline-item {
+            position: relative;
+            margin-bottom: 50px;
+            padding-left: 30px;
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -35px;
+            top: 8px;
+            background: #00ff88;
+            border: 4px solid white;
+            border-radius: 50%;
+            width: 18px;
+            height: 18px;
+            box-shadow: 0 0 0 4px rgba(0, 255, 136, 0.2);
+        }
+        
+        .timeline-item h4 {
+            font-family: 'Montserrat', sans-serif;
+            color: #0a0a0a;
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+        
+        .funding-list {
+            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+            padding: 40px;
+            border-radius: 16px;
+            border-left: 6px solid #00ff88;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+        
+        .funding-list ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .funding-list li {
+            padding: 18px 0;
+            border-bottom: 1px solid #e0e0e0;
+            font-size: 1.1em;
+            color: #4a4a4a;
+        }
+        
+        .funding-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .funding-list li::before {
+            content: '▸';
+            margin-right: 15px;
+            color: #00ff88;
+            font-weight: bold;
+            font-size: 1.3em;
+        }
+        
+        .funding-list strong {
+            color: #0a0a0a;
+            font-weight: 600;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 80px 40px;
+            background: linear-gradient(135deg, rgba(20, 20, 20, 0.95) 0%, rgba(10, 10, 10, 0.98) 100%),
+                        url('https://images.unsplash.com/photo-1529900748604-07564a03e7a6?w=1200&q=80') center/cover;
+            color: white;
+            border-radius: 24px;
+            margin-top: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        footer h3 {
+            font-family: 'Montserrat', sans-serif;
+            color: #00ff88;
+            margin-bottom: 20px;
+            font-size: 2.2em;
+            font-weight: 800;
+            letter-spacing: 1px;
+        }
+        
+        footer p {
+            color: #e0e0e0;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5em;
+            }
+            
+            .section, .section-content {
+                padding: 30px;
+            }
+            
+            h2 {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>LATIN HOUSE FIFA 2026</h1>
+            <div class="subtitle">Vancouver, Canada</div>
+            <div class="tagline">"Unidos por el Fútbol - United Through Football"</div>
+        </header>
+
+        <div class="section">
+            <h2>Vision</h2>
+            <p>To establish Latin House FIFA 2026 as the premier celebration hub in Vancouver for Latin American football culture, creating an unforgettable experience that unites communities, celebrates athletic excellence, and strengthens cultural bonds between Latin America and Canada during the world's greatest sporting event.</p>
+        </div>
+
+        <div class="section">
+            <h2>Mission</h2>
+            <p>To provide an electrifying and inclusive platform for Latin American communities, football fans, and cultural enthusiasts to gather, celebrate, and experience the passion of FIFA 2026. Latin House will serve as the beating heart of Latin American football culture in Vancouver, offering authentic experiences, sports activities, cultural celebrations, and community engagement that honor the rich football heritage of participating nations.</p>
+        </div>
+
+        <div class="section-with-image">
+            <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=1200&q=80" alt="Football stadium" class="section-image">
+            <div class="section-content">
+                <h2>About</h2>
+                <p>Latin House FIFA 2026 will be a dynamic celebration hub located in Vancouver during the FIFA World Cup 2026. This innovative space will serve as the official gathering place for Latin American football culture, designed to bring together fans from across the Americas and beyond to celebrate the beautiful game. With Vancouver hosting multiple World Cup matches, Latin House will be the epicenter of Latin passion, culture, and sporting excellence.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Background</h2>
+            <p>The FIFA World Cup 2026 marks a historic moment as it comes to North America, with Canada co-hosting alongside Mexico and the United States. Vancouver will welcome the world's best football and their passionate supporters. This presents an unprecedented opportunity to showcase Latin American football culture, passion, and community spirit in one of Canada's most vibrant and diverse cities.</p>
+            <p>Latin America has a storied football heritage that captivates billions worldwide. With multiple Latin American nations competing in the tournament, there is a vital need for a dedicated space where these communities can unite, celebrate their teams, and share their rich football traditions with Canadian hosts and international visitors.</p>
+        </div>
+
+        <div class="section">
+            <h2>Participating Latin American Nations</h2>
+            <div class="countries-grid">
+                <div class="country-card">
+                    <div class="name">Argentina</div>
+                </div>
+                <div class="country-card">
+                    <div class="name">Brazil</div>
+                </div>
+                <div class="country-card">
+                    <div class="name">Colombia</div>
+                </div>
+                <div class="country-card">
+                    <div class="name">Ecuador</div>
+                </div>
+                <div class="country-card">
+                    <div class="name">Mexico (Host)</div>
+                </div>
+                <div class="country-card">
+                    <div class="name">Paraguay</div>
+                </div>
+                <div class="country-card">
+                    <div class="name">Uruguay</div>
+                </div>
+                <div class="country-card">
+                    <div class="name">Bolivia (Playoff)</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Key Activities & Programs</h2>
+            
+            <div class="activities-grid">
+                <div class="activity-card">
+                    <img src="https://images.unsplash.com/photo-1522778119026-d647f0596c20?w=800&q=80" alt="Fans watching football" class="activity-image">
+                    <div class="activity-content">
+                        <h4>Match Day Viewing Parties</h4>
+                        <p>Giant screens broadcasting all Latin American team matches with authentic stadium atmosphere, live commentary in Spanish and Portuguese, and thousands of passionate fans creating an unforgettable experience.</p>
+                    </div>
+                </div>
+                
+                <div class="activity-card">
+                    <img src="https://images.unsplash.com/photo-1551958219-acbc608c6377?w=800&q=80" alt="Football match" class="activity-image">
+                    <div class="activity-content">
+                        <h4>Football Tournaments</h4>
+                        <p>Amateur football competitions featuring 5-a-side and 7-a-side tournaments, youth development clinics with former professional players, and street football championships celebrating Latin American playing styles.</p>
+                    </div>
+                </div>
+                
+                <div class="activity-card">
+                    <img src="https://images.unsplash.com/photo-1504609773096-104ff2c73ba4?w=800&q=80" alt="Cultural celebration" class="activity-image">
+                    <div class="activity-content">
+                        <h4>Cultural Celebrations</h4>
+                        <p>Daily performances featuring traditional music, dance, and folklore from participating nations. Authentic culinary experiences with food from Argentina, Brazil, Mexico, Colombia, and beyond.</p>
+                    </div>
+                </div>
+                
+                <div class="activity-card">
+                    <img src="https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?w=800&q=80" alt="Football discussion" class="activity-image">
+                    <div class="activity-content">
+                        <h4>Legends & Conversations</h4>
+                        <p>Meet-and-greets with football legends, panel discussions on Latin American football history, tactical analysis sessions, and storytelling events celebrating iconic World Cup moments.</p>
+                    </div>
+                </div>
+                
+                <div class="activity-card">
+                    <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=800&q=80" alt="Football activities" class="activity-image">
+                    <div class="activity-content">
+                        <h4>Fan Zones & Activities</h4>
+                        <p>Interactive football games, skills challenges, penalty shootout competitions, virtual reality football experiences, and photo opportunities with World Cup replicas and team jerseys.</p>
+                    </div>
+                </div>
+                
+                <div class="activity-card">
+                    <img src="https://images.unsplash.com/photo-1508098682722-e99c43a406b2?w=800&q=80" alt="Football art" class="activity-image">
+                    <div class="activity-content">
+                        <h4>Art & Photography Exhibits</h4>
+                        <p>Rotating exhibitions showcasing Latin American football culture through photography, street art, murals, and installations celebrating iconic players, moments, and the passion of the supporters.</p>
+                    </div>
+                </div>
+                
+                <div class="activity-card">
+                    <img src="https://images.unsplash.com/photo-1609710228159-0fa9bd7c0827?w=800&q=80" alt="Family football" class="activity-image">
+                    <div class="activity-content">
+                        <h4>Family & Community Programs</h4>
+                        <p>Children's football clinics, face painting stations, family-friendly viewing areas, educational programs about football history, and community building activities for all ages.</p>
+                    </div>
+                </div>
+                
+                <div class="activity-card">
+                    <img src="https://images.unsplash.com/photo-1517466787929-bc90951d0974?w=800&q=80" alt="Football celebration" class="activity-image">
+                    <div class="activity-content">
+                        <h4>Pre & Post-Match Celebrations</h4>
+                        <p>Live music performances, DJ sets, traditional celebrations including drums and flags, victory parties, and cultural exchanges bringing together fans from different nations.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Funding Resources</h2>
+            <div class="funding-list">
+                <ul>
+                    <li><strong>FIFA & Football Associations:</strong> Partnership opportunities with FIFA, CONMEBOL, and national football federations from participating countries for official World Cup activation support.</li>
+                    <li><strong>Private Sponsors & Corporate Partners:</strong> Major sports brands (Adidas, Nike, Puma), beverage companies, telecommunications providers, and financial institutions interested in reaching passionate football audiences.</li>
+                    <li><strong>Latin American Business Community:</strong> Engaging Latin American chambers of commerce in Vancouver, Canadian importers of Latin American products, and businesses serving Latin American communities.</li>
+                    <li><strong>Government of Canada:</strong> Securing funding from Canadian Heritage for multicultural programming, Tourism Vancouver for visitor experiences, and federal departments supporting FIFA 2026 legacy projects.</li>
+                    <li><strong>Consulates & Embassies:</strong> Partnerships with Latin American diplomatic missions in Canada for cultural programming, official team support, and community engagement initiatives.</li>
+                    <li><strong>Ticket Sales & Merchandise:</strong> Revenue from ticketed events, official Latin House merchandise, team jerseys and scarves, and commemorative World Cup items.</li>
+                    <li><strong>Food & Beverage Operations:</strong> Revenue from authentic Latin American food vendors, beverage sales, and premium hospitality packages for corporate and VIP guests.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Business Model</h2>
+            <p><strong>Tiered Fan Membership Program:</strong> Offering season passes with exclusive benefits including priority seating at viewing parties, merchandise discounts, and access to meet-and-greet events with football legends.</p>
+            
+            <p><strong>Premium Hospitality Packages:</strong> VIP experiences with premium seating, all-inclusive food and beverage, exclusive areas, and special access to events and activities.</p>
+            
+            <p><strong>Corporate Sponsorships:</strong> Presenting sponsors for major events, branded activation zones, stadium signage opportunities, and official supplier partnerships.</p>
+            
+            <p><strong>Event & Space Rental:</strong> Corporate events, private viewing parties, tournament hosting, and brand activation space for companies targeting football demographics.</p>
+            
+            <p><strong>Merchandise Sales:</strong> Official Latin House FIFA 2026 branded items, team merchandise, commemorative products, and exclusive limited-edition collections.</p>
+            
+            <p><strong>Food & Beverage Revenue:</strong> Multiple food stations featuring authentic cuisine from participating nations, full bar service, and premium catering options.</p>
+        </div>
+
+        <div class="section">
+            <h2>Timeline</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h4>Phase 1: Planning & Preparation (November 2025 - February 2026)</h4>
+                    <p>Secure venue location in Vancouver, finalize partnerships with FIFA and football associations, launch fundraising campaigns, recruit key personnel including operations director and programming manager, develop comprehensive marketing strategy, and establish relationships with Latin American community organizations.</p>
+                </div>
+                
+                <div class="timeline-item">
+                    <h4>Phase 2: Build-Out & Launch (March - May 2026)</h4>
+                    <p>Complete venue transformation with giant screens and football-themed design, install technical infrastructure for broadcasts and connectivity, finalize programming schedule aligned with World Cup match dates, launch ticket sales and membership program, secure food and beverage vendors, and execute pre-tournament marketing blitz.</p>
+                </div>
+                
+                <div class="timeline-item">
+                    <h4>Phase 3: Grand Opening & Tournament Operations (June 11 - July 19, 2026)</h4>
+                    <p>Official grand opening celebration with former football legends, daily operations during the entire World Cup tournament, match day viewing parties for all Latin American team games, cultural programming and tournaments, fan engagement activities, and real-time social media coverage creating viral moments.</p>
+                </div>
+                
+                <div class="timeline-item">
+                    <h4>Phase 4: Legacy & Impact Assessment (August - December 2026)</h4>
+                    <p>Comprehensive evaluation of economic and cultural impact, documentation of community connections made, assessment of commercial success, planning for future sports and cultural events, establishing Latin House as a model for future international sporting events, and exploring permanent cultural center opportunities.</p>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <h3>Latin House FIFA 2026 Vancouver</h3>
+            <p style="font-size: 1.2em; margin-bottom: 10px;">"Where Latin Passion Meets Canadian Hospitality"</p>
+        </footer>
+    </div>
+</body>
+</html>
